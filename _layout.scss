@@ -1,0 +1,19 @@
+/* we used .wrapper instead of .container which is commonly used by other frameworks */
+.wrapper {
+	width: calc(100vw - #{$box_margin} * 4);
+	max-width: $wrapper_max_width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wrapper .full-width {
+	margin-left: $box_margin * -2;
+	margin-right: $box_margin * -2;
+}
+
+@media (min-width: $wrapper_max_width) {
+	.wrapper .full-width {
+		margin-left: calc((100vw - 100%) / -2);
+		margin-right: calc((100vw - 100%) / -2);
+	}
+}
